@@ -110,6 +110,9 @@ ENV/
 env.bak/
 venv.bak/
 
+.venv/
+venv
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -127,3 +130,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# cur project
+sec_config.py
+jupyternb/
+jupyternb
+.idea/
+wifi_streets.py
+wifi_streets_pandas.py
