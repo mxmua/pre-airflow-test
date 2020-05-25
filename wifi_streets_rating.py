@@ -26,7 +26,7 @@ api_url_tpl = 'https://apidata.mos.ru/v1/mapfeatures/{dataset_id}?api_key={api_k
 
 wifi_points_list = []
 for wifi_source in src_dic.keys():
-    api_url = api_url_tpl.format(dataset_id=wifi_source, api_key=mos_api_key)
+    api_url = api_url_tpl.format(dataset_id=wifi_source, api_key=MOS_API_KEY)
     data = requests.get(api_url).json()
     wifi_points_list_new = data['features']
     wifi_points_list.extend(wifi_points_list_new)
