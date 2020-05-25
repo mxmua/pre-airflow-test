@@ -4,7 +4,7 @@ import geocoder
 
 # both apidata.mos.ru API key and GOOGLE_API_KEY
 # should be accessible in current environment
-MOS_API_KEY = os.environ['MOS_API_KEY']
+DATAMOS_API_KEY = os.environ['DATAMOS_API_KEY']
 
 src_dic = {
     '60788': 'Wi-Fi в библиотеках',
@@ -26,7 +26,7 @@ api_url_tpl = 'https://apidata.mos.ru/v1/mapfeatures/{dataset_id}?api_key={api_k
 
 wifi_points_list = []
 for wifi_source in src_dic.keys():
-    api_url = api_url_tpl.format(dataset_id=wifi_source, api_key=MOS_API_KEY)
+    api_url = api_url_tpl.format(dataset_id=wifi_source, api_key=DATAMOS_API_KEY)
     data = requests.get(api_url).json()
     wifi_points_list_new = data['features']
     wifi_points_list.extend(wifi_points_list_new)
